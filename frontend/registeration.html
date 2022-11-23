@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>home page</title>
+   
+    <link rel="stylesheet" href="registeration.css">
+</head>
+<body>
+  <!-- <script src="script.js"></script> -->
+  
+<div class="container">
+    <h1> Registration form </h1>
+    <form action="login.html" name="registration" id="form" class="registartion-form"  method="post" >
+      <table>
+        <tr>
+          <td><label for="name">Name:</label></td>
+          <td><input type="text" name="name" id="name" placeholder="your name"></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="text" name="email" id="email" placeholder="your email"></td>
+        </tr>
+        <tr>
+            <td><label for="language">Account</label></td>
+            <td>
+              <select name="account" id="account">
+                <option value="">Account</option>
+                <option value="walmart">WALMART</option>
+                <option value="ANTHEM">ANTHEM</option>
+                <option value="EQUIFACTS">EQUIFACTS</option>
+                <option value="INTEL">INTEL</option>
+                <option value="HGHJ">HGHJ</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="phoneNumber">Phone Number:</label></td>
+            <td><input type="tel" name="phonenumber" id="phonenumber"></td>
+          </tr>
+          
+         
+        <tr>
+            <td><label for="name">Username:</label></td>
+            <td><input type="text" name="usernamename" id="username" placeholder="your name"></td>
+          </tr>
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" name="password" id="password"></td>
+        </tr>
+        <tr>
+            <td><label for="password">confirm password:</label></td>
+            <td><input type="password" name="password" id="password1"></td>
+          </tr>
+        
+        
+        <!-- <tr>
+          <td><label for="about">About:</label></td>
+          <td><textarea name="about" id="about" placeholder="Write about yourself..."></textarea></td>
+        </tr> -->
+        <tr>
+          <!-- <button type="submit"><a href="fetchuser.html">Login</a></button> -->
+
+          <td colspan="2" ><input type="submit" class="submit" value="register"  /></td>
+        </tr>
+      </table>
+       
+    </form>
+  </div>
+  <script>
+    var form=document.getElementById('form')
+    form.addEventListener('submit',function(e){
+             e.preventDefault();
+      var name=document.getElementById('name').value  
+      var email=document.getElementById('email').value  
+      var account=document.getElementById('account').value 
+      var phonenumber=document.getElementById('phonenumber').value  
+      var username=document.getElementById('username').value  
+      var password=document.getElementById('password').value 
+     
+      
+      fetch("http://localhost:8080/register", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name:name,
+          email: email,
+          account: account,
+          phonenumber: phonenumber,
+          username: username,
+          password: password})
+        })
+        .then((response) => {
+        //   // console.log(response.json())
+             
+                 return response.json()})
+                 window.location.href = "login.html"
+             
+        //  .then((data)=>{
+        //    console.log('Success:', data)})
+        //  })
+         })
+         .catch((error)=>{
+           console.log("error",error)
+         })
+          
+    
+    
+    // fetch("http://localhost:8080/register", {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(name, email, account, phonenumber, username, password)
+    //     })
+    //      .then((response) => console.log((response.json())))
+  //       .then((data) => {
+  //         console.log('Success:', data);
+  //       })
+        // .catch((error) => {
+        //   console.error('Error:', error);
+        // });
+ </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="projectlist.css">
+
+    
+    <title>project list</title>
+</head>
+<body>
+    <div class="container bootstrap snippets bootdey">
+        <div class="table-responsive">
+            <!-- PROJECT TABLE -->
+            <table class="table colored-header datatable project-list" >
+                <thead>
+                    <tr>
+                        <td>Title</td>
+                        <td>Date Start</td>
+                        <!-- <td>Days to Deadline</td>
+                        <td>Progress</td> -->
+                        <th>Priority</th>
+                        <th>Leader</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <!-- <tr>
+                       
+                            <th>{{value.title}} </th>
+                            <td>${value.startdate}</td>
+                            <td>${r.position}</td> 
+                            <td>${r.salary}</td>          
+                        </tr>
+                        <td><a href="#">dgjhfj</a></td>
+                        <td>18-05-2014</td>
+                        <td>12 days</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" data-transitiongoal="95" aria-valuenow="95" style="width: 95%;">95%</div>
+                            </div>
+                        </td>
+                        <td><span class="label label-warning">MEDIUM</span></td>
+                        <td><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Avatar" class="avatar img-circle"> <a href="#">Michael</a></td>
+                        <td><span class="label label-success">ACTIVE</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">E-Commerce Site</a></td>
+                        <td>24-05-2014</td>
+                        <td>30 days</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" data-transitiongoal="40" aria-valuenow="40" style="width: 40%;">40%</div>
+                            </div>
+                        </td>
+                        <td><span class="label label-success">LOW</span></td>
+                        <td><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Avatar" class="avatar img-circle"> <a href="#">Antonius</a></td>
+                        <td><span class="label label-warning">PENDING</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Project 123GO</a></td>
+                        <td>20-09-2014</td>
+                        <td>50 days</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" data-transitiongoal="65" aria-valuenow="65" style="width: 65%;">65%</div>
+                            </div>
+                        </td>
+                        <td><span class="label label-danger">HIGH</span></td>
+                        <td><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Avatar" class="avatar"> <a href="#">Antonius</a></td>
+                        <td><span class="label label-success">ACTIVE</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Wordpress Theme</a></td>
+                        <td>05-10-2014</td>
+                        <td>40 days</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" data-transitiongoal="77" aria-valuenow="77" style="width: 77%;">77%</div>
+                            </div>
+                        </td>
+                        <td><span class="label label-warning">MEDIUM</span></td>
+                        <td><img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="Avatar" class="avatar"> <a href="#">Michael</a></td>
+                        <td><span class="label label-success">ACTIVE</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Redesign Landing Page</a></td>
+                        <td>15-11-2014</td>
+                        <td>30 days</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" data-transitiongoal="25" aria-valuenow="25" style="width: 25%;">25%</div>
+                            </div>
+                        </td>
+                        <td><span class="label label-success">LOW</span></td>
+                        <td><img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="Avatar" class="avatar"> <a href="#">Jason</a></td>
+                        <td><span class="label label-success">ACTIVE</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Wordpress Theme</a></td>
+                        <td>05-10-2014</td>
+                        <td>N/A</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-default" data-transitiongoal="100" aria-valuenow="100" style="width: 100%;">100%</div>
+                            </div>
+                        </td>
+                        <td><span class="label label-default">MEDIUM</span></td>
+                        <td><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Avatar" class="avatar"> <a href="#">Michael</a></td>
+                        <td><span class="label label-default">CLOSED</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Redesign Landing Page</a></td>
+                        <td>15-11-2014</td>
+                        <td>30 days</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" data-transitiongoal="33" aria-valuenow="33" style="width: 33%;">33%</div>
+                            </div>
+                        </td>
+                        <td><span class="label label-success">LOW</span></td>
+                        <td><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Avatar" class="avatar"> <a href="#">Jason</a></td>
+                        <td><span class="label label-warning">PENDING</span></td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <!-- END PROJECT TABLE -->
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- <script> -->
+    <!-- // fetch("http://localhost:8080/getproject",{method:'GET'})
+    //  .then(res => {console.log(res.json())
+    //             return res.json()})
+    //  .then(result=>console.log(result)
+    //     )
+    //     .catch(errorMsg => { console.log(errorMsg); }); -->
+ <!-- </script>  -->
+    
+ 
+ 
+ 
+ <script>
+ 
+            fetch("http://localhost:8080/getproject",{method:'GET'})
+                .then((response) => response.json())
+                // console.log(data)
+                  .then((data) => {                                          
+                    data.forEach(value => {
+                        let tbody = document.querySelector('table tbody');
+                        let row = document.createElement('tr');
+
+                        let col1 = document.createElement('td');
+
+                        col1.innerHTML = value.title;
+
+                        console.log(col1)
+                        let col2 = document.createElement('td');
+
+                        col2.innerHTML = value.startdate;
+
+                        console.log(col2)
+                        // let col3 = document.createElement('td');
+
+                        // col3.innerHTML = value.daystodeadline
+
+                        // console.log(col3)
+                        // let col4 = document.createElement('td');
+
+                        // col4.innerHTML = value.progress;
+
+                        // console.log(col4)
+                        let col5 = document.createElement('td');
+
+                        col5.innerHTML = value.priority;
+
+                        console.log(col5)
+                        let col6 = document.createElement('td');
+
+                        col6.innerHTML = value.leader;
+
+                        console.log(col6)
+                        let col7 = document.createElement('td');
+                        col7.innerHTML = value.status;
+                        col7.style.color="green"
+                        
+                        console.log(col7)
+                        
+                         row.appendChild(col1)
+
+                          row.appendChild(col2)
+                        //  row.appendChild(col3)
+                        //  row.appendChild(col4)
+                        row.appendChild(col5)
+                        row.appendChild(col6)
+                        row.appendChild(col7)
+                         
+                      
+                         tbody.append(row)
+
+                       
+                    })
+                })
+                .catch(console.error);
+     </script>
+
+    <!-- <script src="projectlist.js"></script> -->
+</body>
+</html>
+
+
+
+
+
+
+
+
